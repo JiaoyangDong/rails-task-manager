@@ -1,4 +1,5 @@
 <h1>Task details for <%= @task.title %></h1>
+<%= link_to 'Edit this task', edit_task_path(@task)  %>
 <div class="details">
   <%= @task.details %>
 </div>
