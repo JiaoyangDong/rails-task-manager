@@ -1,0 +1,13 @@
+<h1>All the Tasks</h1>
+<ul>
+  <%# tasks list %>
+  <% @tasks.each do |task|  %>
+    <%= task.completed ? "☑" : "☐" %>
+    <%# <input type="checkbox" id="title" name="vehicle1" value="Bike"> %>
+    <label for="title"> <%= link_to task.title, task_path(task), class: "" %></label>
+    <br>
+  <% end %>
+
+  <%# new tasks %>
+  <%= link_to '+ add a new task', new_task_path %>
+</ul>
